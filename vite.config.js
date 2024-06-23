@@ -4,6 +4,14 @@ export default {
     plugins: [
         vue()
     ],
+    server: {
+        port: 8000,
+        strictPort: true,
+        watch: {
+          // 3. tell vite to ignore watching `src-tauri`
+          ignored: ["**/src-tauri/**"],
+        },
+      },
     build: {
         lib: {
             entry: 'src/main.js',
